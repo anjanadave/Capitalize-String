@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalize String</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Enter Value</h1>
+        <input type="text" id="inputString" class="one">
+        <button onclick="capitalizeString()">Capitalize</button>
+        <p id="result"></p>
+    </div>
+    <script>
+    function capitalizeString(){
+        let inputString = document.getElementById("inputString").value;
+
+        let capitalizedString = inputString.replace(/\b\w/g, match => match.toUpperCase());
+
+        document.getElementById("result").innerHTML = `Capitalized String: ${capitalizedString}`;
+    }
+    </script>
+</body>
+</html>
